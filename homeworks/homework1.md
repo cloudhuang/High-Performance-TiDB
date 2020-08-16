@@ -416,3 +416,7 @@ func (s *session) PrepareTxnCtx(ctx context.Context) {
 ![](./images/homework1/homework1-task2.png)
 
 再次通过mysql client查询数据库，查询作业1时创建的表格和数据。
+
+看到群里有朋友提到测试2的问题，所以这里修改一下，把日志打印在严格的『START TRANSACTION』意义部分，只有当输入"start transaction;"或者"begin;"的时候，才输出"hello transaction"，感觉确实这样更加的合理，如图部分：
+
+![image-20200816165103209](images/homework1/image-20200816165103209.png)
