@@ -226,6 +226,8 @@
     tiup ctl pd -u http://192.168.153.145:2379 config set dashboard-address auto
     tiup cluster display tidb-test --dashboard
     ```
+    
+    ![image-20200825100549988](images/homework2/image-20200825100549988.png)
 
 ## 集群性能测试
 
