@@ -1,1 +1,5 @@
-workspace/
+workspace/tidb/
+workspace/tikv/
+workspace/pd/
+workspace/rust-sandbox/target/
+**/.vagrant/
