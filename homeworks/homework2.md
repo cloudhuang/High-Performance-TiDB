@@ -788,6 +788,20 @@ set config "127.0.0.1:20180" log.level="info"
 
 另外，由于虚拟的CPU也比较弱，在练习PD部分的配置项的时候，比如实验`schedule.region-schedule-limit`的时候，发现`tmpC`的值特别低，查看集群的时候，发现部分PD节点挂掉了。造成一部分的配置项无法在虚拟机环境下顺利的进行实验。
 
+
+
+#### TiDB Dashboard性能分析
+
+TiDB Dashboard上集成了实例的性能分析功能，通过选择实例(TiKV, PD, TiDB)，并选择分析时长，就可以自动的对集群进行性能分析。
+
+![image-20200825101318363](images/homework2/image-20200825101318363.png)
+
+
+
+下图就是下载的PD的分析数据，使用了go pprof，可以非常直观的展示源码层面的性能数据。
+![image-20200825101404140](images/homework2/image-20200825101404140.png)
+
+
 # Troubleshooting
 
 1. Centos7自带的git版本太低，在编译go-ycsb会出错"fatal: git fetch-pack: expected shallow list"，所以需要更新git的版本
