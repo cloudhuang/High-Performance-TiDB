@@ -191,7 +191,30 @@ Perf可以解决高级性能和故障排除，它可以分析：
 
 perf提供了一系列的命令来分析程序，如下：
 
-[Commonds](https://www.notion.so/8226a42727514fca84ff1aa71b8c7a6e)
+| sub command   | 功能说明                                             |
+| :------------ | :---------------------------------------------------|
+| annotate      | 读取perf.data(由perf record生成)显示注释信息，如果被分析的进程含义debug符号信息，则会显示汇编和对应的源码，否则只显示汇编代码 |
+| archive       | 根据perf.data(由perf record生成)文件中的build-id将相关的目标文件打包，方便在其他机器分析 |
+| bench         | perf提供的基准套件的通用框架，可以对当前系统的调度，IPC，内存访问进行性能评估 |
+| buildid-cache | 管理build-id,管理对于的bin文件                               |
+| buildid-list  | 列出perf.data中的所以buildids                                |
+| data          | 把perf.data文件转换成其他格式                                |
+| diff          | 读取多个perf.data文件，并给出差异分析                        |
+| evlist        | 列出perf.data中采集的事件列表                                |
+| kmem          | 分析内核内存的使用                                           |
+| kvm           | 分析kvm虚拟机上的guest os                                    |
+| **list**      | **列出当前系统支持的所有事件名,可分为三类：硬件事件、软件事件，检查点** |
+| lock          | 分析内核中的锁信息，包括锁的争用情况，等待延迟等             |
+| **record**    | **对程序运行过程中的事件进行分析和记录，并写入perf.data**    |
+| **report**    | **读取perf.data(由perf record生成) 并显示分析结果**          |
+| sched         | 针对调度器子系统的分析工具。                                 |
+| **script**    | **读取perf.data(由perf record生成)，生成trace记录，供其他分析工具使用** |
+| **stat**      | **对程序运行过程中的性能计数器进行统计**                     |
+| test          | perf对当前软硬件平台进行健全性测试，可用此工具测试当前的软硬件平台是否能支持perf的所有功能。 |
+| timechart     | 对record结果进行可视化分析输出，record命令需要加上timechart记录 |
+| top           | 对系统的性能进行分析，类型top命令，当然可以对单个进程进行分析 |
+| probe         | 用于定义动态检查点。                                         |
+| trace         | 类似于strace，跟踪目标的系统调用，但开销比strace小           |
 
 perf的使用大体可以有三种方式：
 
